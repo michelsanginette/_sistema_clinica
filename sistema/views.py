@@ -9,3 +9,16 @@ def index(request):
 
 
 # REQUEST - RESPONSE - RENDER
+
+# Testando
+def teste(request):
+    return render(
+        request,
+        'global/teste.html'
+    )
+
+def seunome(request):
+    return render(
+        request,
+        'global/seunome.html'
+    )
