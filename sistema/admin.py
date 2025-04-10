@@ -24,3 +24,9 @@ class MedicoAdmin(admin.ModelAdmin):
     list_display = ('id', 'nome', 'sobrenome', 'email', 'crm', 'ativo',)
     list_editable = ('ativo',)
     search_fields = ('id', 'nome', 'email',)
+
+
+# Aqui fica o registro do model da Consulta
+@admin.register(models.Consulta)
+class ConsultaAdmin(admin.ModelAdmin):
+    list_display = ('id', 'paciente_id', 'medico_id', 'status')
